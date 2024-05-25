@@ -1,6 +1,15 @@
 <h1>Login</h1>
 
 <form action="/sessions" method="post">
-
-  <button>Login<button>
+  <div class="mb-3">
+    <label class="form-label" for="username_input">Username</label>
+    <input class="form-control" type="text" name="username" id="username_input">  
+  </div>
+  <div class="mb-3">
+    <label class="form-label" for="password_input">Password</label>
+    <input class="form-control" type="password" name="password" id="password_input">
+  </div>
+  <div class="mb-3">
+	  <button class="btn btn-primary">Sign In</button>
+  </div>
 </form>
