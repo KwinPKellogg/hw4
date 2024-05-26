@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
     # authenticate the user
     # try to find the user by their unique identifier
-    @user = User.find_by({ "username" => params["username"] })
+    @user = User.find_by({ "email" => params["email"] })
     # if the user exists -> check if they know their password
     if @user != nil
       # if they know their password -> login is successful
