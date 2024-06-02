@@ -15,6 +15,7 @@ group :development, :test do
 end
 
 group :development do
+  gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem "sqlite3", "~> 1.4"
   gem "tabulo"
   gem "web-console"
