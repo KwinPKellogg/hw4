@@ -14,7 +14,11 @@
               <div class="col-md-4 entry">
                 <h2><%= entry["title"] %></h2>
                 <p><%= entry["occurred_on"] %></p>
-                <!-- img src="placeholder.jpg" alt="Placeholder image" class="img-fluid"-->
+                <% if entry.uploaded_image.attached? %>
+                  <img src="<%= url_for(entry.uploaded_image) %>" class="img-fluid">
+                <% else %>
+                  <img src="<%= entry["image"] %>" class="img-fluid">
+                <% end %>
                 <p><%= entry["description"] %></p>
               </div>
             <% end %>
