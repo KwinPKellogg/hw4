@@ -17,7 +17,6 @@
               <p><%= entry["occurred_on"] %></p>
 
               <% if entry.uploaded_image.attached? %>
-                <%= (entry.uploaded_image) %>
                 <img src="<%= url_for(entry.uploaded_image) %>" class="img-fluid">  
               <% else %>
                 <img src="<%="path/to/default/image.jpg"%>" class="img-fluid">
